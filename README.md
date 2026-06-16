@@ -19,14 +19,12 @@ All audio duplication is handled by **[audio-duplicator](https://github.com/Kl1m
 
 - **Windows 10/11**
 - **[.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0)** (x64)
-- **[audio-duplicator.exe](https://github.com/Kl1movM/audio-duplicator)** — place it in the same folder as `WindowsAudioMirror.exe`
 
 ## Quick Start
 
 1. Download the [latest release](https://github.com/MewMeow69/windows-audio-mirror/releases/latest)
 2. Extract the zip
-3. Download `audio_duplicator.exe` from [audio-duplicator releases](https://github.com/Kl1movM/audio-duplicator/releases) and place it in the extracted folder
-4. Run `WindowsAudioMirror.exe`
+3. Run `WindowsAudioMirror.exe`
 
 ## Build from Source
 
@@ -36,7 +34,7 @@ cd windows-audio-mirror
 dotnet build -c Release
 ```
 
-Then place `audio_duplicator.exe` in `bin\Release\net8.0-windows\` and run `WindowsAudioMirror.exe`.
+Then run `WindowsAudioMirror.exe` from the output folder (also needs `audio_duplicator.exe` — see Credits).
 
 ## License
 
