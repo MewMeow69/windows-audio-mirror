@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>AudioControlHub</AssemblyName>
+    <RootNamespace>AudioControlHub</RootNamespace>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <Authors>MewMeow69</Authors>
+    <Description>GUI wrapper for audio-duplicator by Kl1movM — mirror audio between Windows playback devices</Description>
+    <RepositoryUrl>https://github.com/MewMeow69/windows-audio-mirror</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="app.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="audio_duplicator.exe" Condition="Exists('audio_duplicator.exe')">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
