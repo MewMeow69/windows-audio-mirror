@@ -21,8 +21,8 @@ public partial class MainWindow : Window
         btnStartMirror.Click += (_, _) => StartMirror();
         btnStopMirror.Click += (_, _) => StopMirror();
 
-        cboSource.SelectionChanged += (_, _) => UpdateButtonStates();
-        cboTarget.SelectionChanged += (_, _) => UpdateButtonStates();
+        cboSource.SelectionChanged += (_, _) => { UpdateButtonStates(); UpdateDeviceInfo(); };
+        cboTarget.SelectionChanged += (_, _) => { UpdateButtonStates(); UpdateDeviceInfo(); };
 
         Loaded += OnLoaded;
         Closing += (_, _) =>
@@ -79,6 +79,7 @@ public partial class MainWindow : Window
         }
         catch { }
         UpdateButtonStates();
+        UpdateDeviceInfo();
     }
 
     private void StartMirror()
@@ -128,6 +129,28 @@ public partial class MainWindow : Window
             btnStopMirror.IsEnabled = _duplicator.IsRunning;
         }
         catch { }
+    }
+
+    private void UpdateDeviceInfo()
+    {
+        var src = cboSource.SelectedItem as AudioDevice;
+        var tgt = cboTarget.SelectedItem as AudioDevice;
+
+        lblSrcInfo.Text = src != null
+            ? $"Source: {src.Name}  —  {src.FormatSummary}"
+            : "Source: —";
+        lblTgtInfo.Text = tgt != null
+            ? $"Target: {tgt.Name}  —  {tgt.FormatSummary}"
+            : "Target: —";
+
+        if (src != null && tgt != null
+            && !string.IsNullOrEmpty(src.FormatSummary)
+            && !string.IsNullOrEmpty(tgt.FormatSummary))
+            lblResampleInfo.Text = src.FormatSummary == tgt.FormatSummary
+                ? "Resampling: No (same format)"
+                : "Resampling: Yes (handled automatically)";
+        else
+            lblResampleInfo.Text = "Resampling: —";
     }
 
     private System.Windows.Media.Brush TryBrush(string key)

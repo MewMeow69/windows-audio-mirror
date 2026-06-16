@@ -39,14 +39,35 @@ public static class AudioDeviceService
                 continue;
             if (!seenNames.Add(name)) continue;
 
+            var desc = propsKey.GetValue(
+                "{a45c254e-df1c-4efd-8020-67d146a850e0},4") as string ?? "";
+
+            var fmt = ParseFormat(propsKey.GetValue(
+                "{f19f064d-086c-4e44-9f25-d2a68e7c3537},0") as byte[]);
+
             result.Add(new AudioDevice
             {
                 Id = subKeyName,
-                Name = name
+                Name = name,
+                DeviceDescription = desc,
+                FormatSummary = fmt
             });
         }
 
         return result.OrderBy(d => d.Name).ToList();
+    }
+
+    private static string ParseFormat(byte[]? data)
+    {
+        if (data == null || data.Length < 18) return "";
+        try
+        {
+            var ch = BitConverter.ToUInt16(data, 2);
+            var sr = BitConverter.ToUInt32(data, 4);
+            var bps = BitConverter.ToUInt16(data, 14);
+            return $"{sr} Hz, {bps} bit, {ch} ch";
+        }
+        catch { return ""; }
     }
 
     public static string? FindDeviceId(string nameSubstr)
