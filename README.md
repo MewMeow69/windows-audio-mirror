@@ -26,14 +26,6 @@ All audio duplication is handled by **[audio-duplicator](https://github.com/Kl1m
 2. Extract the zip
 3. Run `WindowsAudioMirror.exe`
 
-   Usage
-
-    Download WindowsAudioMirror-v1.0.0.zip from releases
-    Extract and run WindowsAudioMirror.exe
-    Select 'Source' audio output that you want to mirror
-    Select 'Target' audio ouput
-    Click on 'Start'
-
 
 ## Build from Source
 
