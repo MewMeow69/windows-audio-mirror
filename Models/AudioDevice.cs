@@ -1,4 +1,4 @@
-namespace AudioControlHub.Models;
+namespace WindowsAudioMirror.Models;
 
 public class AudioDevice
 {

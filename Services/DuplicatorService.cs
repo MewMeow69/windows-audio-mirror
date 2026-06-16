@@ -2,7 +2,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace AudioControlHub.Services;
+namespace WindowsAudioMirror.Services;
 
 public class DuplicatorService : IDisposable
 {

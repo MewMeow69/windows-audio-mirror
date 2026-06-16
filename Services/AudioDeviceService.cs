@@ -1,7 +1,7 @@
 using Microsoft.Win32;
-using AudioControlHub.Models;
+using WindowsAudioMirror.Models;
 
-namespace AudioControlHub.Services;
+namespace WindowsAudioMirror.Services;
 
 public static class AudioDeviceService
 {

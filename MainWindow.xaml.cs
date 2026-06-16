@@ -1,8 +1,8 @@
 ﻿using System.Windows;
-using AudioControlHub.Models;
-using AudioControlHub.Services;
+using WindowsAudioMirror.Models;
+using WindowsAudioMirror.Services;
 
-namespace AudioControlHub;
+namespace WindowsAudioMirror;
 
 public partial class MainWindow : Window
 {
