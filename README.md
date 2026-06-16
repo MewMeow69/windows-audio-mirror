@@ -26,7 +26,7 @@ All audio duplication is handled by **[audio-duplicator](https://github.com/Kl1m
 2. Extract the zip
 3. Run `WindowsAudioMirror.exe`
 
-##Usage
+   Usage
 
     Download WindowsAudioMirror-v1.0.0.zip from releases
     Extract and run WindowsAudioMirror.exe
