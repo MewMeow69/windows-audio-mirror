@@ -2,6 +2,10 @@
 
 A simple Windows GUI for **[audio-duplicator](https://github.com/Kl1movM/audio-duplicator)** by **Kl1movM** that lets you mirror audio from your default playback device to a second output device.
 
+# Why is this better than Stereo Mix?
+
+Because stereo mix is annoying to use, has more latency and this just bundles everything into a nice little app.
+
 ## Credits
 
 All audio duplication is handled by **[audio-duplicator](https://github.com/Kl1movM/audio-duplicator)** by Kl1movM. This project is a GUI wrapper that makes it easier to use.
