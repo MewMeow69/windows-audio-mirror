@@ -12,12 +12,12 @@ All audio duplication is handled by **[audio-duplicator](https://github.com/Kl1m
 
 ## Features
 
-- **Mirror any playback device** — route audio from your default output to a second device
-- **Smart device detection** — only shows active, physical playback devices (filters out virtual endpoints)
-- **One-click start/stop** — simple Start/Stop buttons, no command-line needed
-- **Dark-themed WPF** — modern dark UI with system tray support (minimizes to tray)
-- **Auto-configures** — selects the first two devices as source/target automatically
-- **No permanent changes** — doesn't modify Windows audio settings, just duplicates
+- **Mirror any playback device** - route audio from your default output to a second device
+- **Smart device detection** - only shows active, physical playback devices (filters out virtual endpoints)
+- **One-click start/stop** - simple Start/Stop buttons, no command-line needed
+- **Dark-themed WPF** - modern dark UI with system tray support (minimizes to tray)
+- **Auto-configures** - selects the first two devices as source/target automatically
+- **No permanent changes** - doesn't modify Windows audio settings, just duplicates
 
 ## Prerequisites
 
