@@ -1,6 +1,6 @@
 # Windows Audio Mirror
 
-A simple Windows GUI for **[audio-duplicator](https://github.com/Kl1movM/audio-duplicator)** by **Kl1movM** — mirror audio from your default playback device to a second output device.
+A simple Windows GUI for **[audio-duplicator](https://github.com/Kl1movM/audio-duplicator)** by **Kl1movM** that lets you mirror audio from your default playback device to a second output device.
 
 ## Credits
 
